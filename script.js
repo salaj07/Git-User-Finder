@@ -5,14 +5,14 @@ let card=document.querySelector(".card")
 
 //data fetching
 function getUser(username){
-    return  fetch(`http://api.github.com/users/${username}`).then(
+    return  fetch(`https://api.github.com/users/${username}`).then(
         (raw) => {if (!raw.ok) throw new Error("user not found");
             return raw.json()
 
         })
 }
 function getRepos(username){
-    return fetch(`http://api.github.com/users/${username}/repos?sort=updated&per_page=5`).then((raw) => 
+    return fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=5`).then((raw) => 
     
         {if(!raw.ok) throw new Error("failed to fetch repos");
             return raw.json()
