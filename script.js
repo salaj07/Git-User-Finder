@@ -26,6 +26,7 @@ function getUser(username) {
     });
 }
 
+
 //  fetch function for repositories
 function getRepos(username) {
     return fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=5`, {
